@@ -1,0 +1,3178 @@
+Fully Variational RTCH Master Action
+
+1. Scope and status of the construction
+
+We construct a diffeomorphism-invariant relativistic field theory containing:
+
+[
+(M,g_{\mu\nu}),
+]
+
+a scalar field
+
+[
+\phi:M\rightarrow\mathbb R,
+]
+
+thermodynamic/state fields
+
+[
+Y^A:M\rightarrow\mathcal T,
+]
+
+and a two-form gauge field
+
+[
+B\in\Omega^2(M).
+]
+
+The thermodynamic target manifold \mathcal T carries:
+
+[
+G_{AB}(Y),
+]
+
+a target-space metric,
+
+[
+U(Y),
+]
+
+a scalar potential,
+
+and a closed two-form
+
+[
+\omega=\frac12\omega_{AB}(Y)dY^A\wedge dY^B,
+\qquad
+d_{\mathcal T}\omega=0.
+]
+
+We require, for a genuinely topological sector,
+
+[
+[\omega]\neq0\in H^2_{\rm dR}(\mathcal T).
+]
+
+The spacetime pullback is
+
+[
+F_Q\equiv\Phi^*\omega
+
+\frac12F_{Q\mu\nu}dx^\mu\wedge dx^\nu,
+]
+
+with
+
+[
+F_{Q\mu\nu}
+
+\omega_{AB}(Y)
+\partial_\mu Y^A
+\partial_\nu Y^B.
+]
+
+Because
+
+[
+d_{\mathcal T}\omega=0,
+]
+
+we have
+
+[
+dF_Q=d(\Phi^\omega)=\Phi^(d_{\mathcal T}\omega)=0.
+]
+
+The topological charge is therefore defined on a closed two-cycle \Sigma_2\subset M by
+
+[
+\boxed{
+Q_{\rm RTCH}[\Sigma_2]
+
+\int_{\Sigma_2}F_Q
+
+\int_{\Sigma_2}\Phi^*\omega.
+}
+]
+
+If \Sigma_2 represents a nontrivial homology class, this gives the pairing
+
+[
+Q_{\rm RTCH}
+
+\langle[\omega],[\Sigma_2]\rangle.
+]
+
+This is consistent with the ECC treatment of entropy flux as a cohomological fingerprint.
+
+The important distinction is
+
+[
+\boxed{
+Q_{\rm RTCH}=\int_{\Sigma_2}F_Q
+}
+]
+
+versus the local scalar
+
+[
+\boxed{
+\mathcal I_Q
+
+\frac14F_{Q\mu\nu}F_Q^{\mu\nu}.
+}
+]
+
+The former is topological; the latter is a local dynamical scalar.
+
+---
+
+2. Conventions
+
+We use spacetime signature
+
+[
+(-,+,+,+).
+]
+
+Coordinates are
+
+[
+x^\mu=(x^0,x^1,x^2,x^3),
+\qquad
+x^0=ct.
+]
+
+The metric determinant is
+
+[
+g=\det(g_{\mu\nu})<0,
+]
+
+and the invariant volume form is
+
+[
+\varepsilon_g
+
+\sqrt{-g},
+dx^0\wedge dx^1\wedge dx^2\wedge dx^3.
+]
+
+The Levi-Civita tensor is defined by
+
+[
+\varepsilon^{0123}
+
+\frac{1}{\sqrt{-g}},
+]
+
+and therefore
+
+[
+\varepsilon_{0123}
+
+-\sqrt{-g}.
+]
+
+Indices are raised and lowered with g_{\mu\nu}.
+
+The Hodge dual is defined by
+
+[
+*(dx^{\mu_1}\wedge\cdots\wedge dx^{\mu_p})
+
+\frac{\sqrt{-g}}{(4-p)!}
+g^{\mu_1\nu_1}\cdots g^{\mu_p\nu_p}
+\varepsilon_{\nu_1\cdots\nu_p\alpha_{p+1}\cdots\alpha_4}
+dx^{\alpha_{p+1}}\wedge\cdots\wedge dx^{\alpha_4}.
+]
+
+We initially set
+
+[
+c=\hbar=1
+]
+
+during the variational derivation. Physical dimensions and restoration of c,\hbar are given below.
+
+---
+
+3. Field content
+
+The complete dynamical field set is
+
+[
+\Psi_{\rm RTCH}
+
+\left{
+g_{\mu\nu},
+\phi,
+Y^A,
+B_{\mu\nu},
+\Psi_m
+\right}.
+]
+
+Here:
+
+- g_{\mu\nu} is the spacetime metric;
+- \phi is the scalar field;
+- Y^A are thermodynamic/state-space fields;
+- B_{\mu\nu}=-B_{\nu\mu} is a two-form gauge potential;
+- \Psi_m denotes ordinary matter fields.
+
+The map
+
+[
+\Phi:M\rightarrow\mathcal T
+]
+
+is represented locally by
+
+[
+x^\mu\mapsto Y^A(x).
+]
+
+The target-space transformation
+
+[
+Y^A\rightarrow Y'^A(Y)
+]
+
+is treated as a coordinate transformation on \mathcal T, not as an independent spacetime gauge symmetry.
+
+---
+
+4. Gauge structure of the two-form
+
+The two-form field is
+
+[
+B
+
+\frac12B_{\mu\nu}dx^\mu\wedge dx^\nu.
+]
+
+Its field strength is
+
+[
+H=dB.
+]
+
+In components,
+
+[
+\boxed{
+H_{\mu\nu\rho}
+
+3\nabla_{[\mu}B_{\nu\rho]}
+}
+]
+
+or explicitly,
+
+[
+H_{\mu\nu\rho}
+
+\nabla_\mu B_{\nu\rho}
++
+\nabla_\nu B_{\rho\mu}
++
+\nabla_\rho B_{\mu\nu}.
+]
+
+Since the Levi-Civita connection is torsion-free,
+
+[
+H_{\mu\nu\rho}
+
+\partial_\mu B_{\nu\rho}
++
+\partial_\nu B_{\rho\mu}
++
+\partial_\rho B_{\mu\nu}.
+]
+
+The gauge transformation is
+
+[
+\boxed{
+B\rightarrow B+d\Lambda
+}
+]
+
+with
+
+[
+\Lambda\in\Omega^1(M).
+]
+
+Because
+
+[
+d^2\Lambda=0,
+]
+
+we have
+
+[
+H\rightarrow H.
+]
+
+---
+
+5. The master RTCH action
+
+The minimal action is
+
+[
+\boxed{
+S_{\rm RTCH}
+
+S_{\rm EH}
++
+S_\phi
++
+S_Y
++
+S_B
++
+S_{\rm top}
++
+S_m
++
+S_{\rm GHY}.
+}
+]
+
+Each term is now defined exactly.
+
+---
+
+5.1 Einstein-Hilbert term
+
+[
+\boxed{
+S_{\rm EH}
+
+\frac{1}{16\pi G}
+\int_M R,\varepsilon_g
+}
+]
+
+in c=1 units.
+
+Equivalently,
+
+[
+S_{\rm EH}
+
+\frac{1}{16\pi G}
+\int d^4x\sqrt{-g},R.
+]
+
+---
+
+5.2 Scalar-field action
+
+Define
+
+[
+\boxed{
+S_\phi
+
+-\int_M
+\left[
+\frac12\nabla_\mu\phi\nabla^\mu\phi
++
+V(\phi)
+\right]\varepsilon_g.
+}
+]
+
+Thus
+
+[
+S_\phi
+
+-\int d^4x\sqrt{-g}
+\left[
+\frac12g^{\mu\nu}\partial_\mu\phi\partial_\nu\phi
++
+V(\phi)
+\right].
+]
+
+---
+
+5.3 Thermodynamic/state-field action
+
+The target-space metric is
+
+[
+G_{AB}(Y).
+]
+
+The sigma-model kinetic term is
+
+[
+\boxed{
+S_Y
+
+-\int_M
+\left[
+\frac12G_{AB}(Y)
+g^{\mu\nu}
+\partial_\mu Y^A\partial_\nu Y^B
++
+U(Y)
+\right]\varepsilon_g.
+}
+]
+
+Thus
+
+[
+S_Y
+
+-\int d^4x\sqrt{-g}
+\left[
+\frac12G_{AB}
+g^{\mu\nu}
+\partial_\mu Y^A\partial_\nu Y^B
++
+U
+\right].
+]
+
+The target-space Christoffel symbols are
+
+[
+\boxed{
+\Gamma^A{}_{BC}
+
+\frac12G^{AD}
+\left(
+\partial_B G_{DC}
++
+\partial_C G_{DB}
+
+\partial_DG_{BC}
+\right).
+}
+]
+
+---
+
+6. The cohomological/topological sector
+
+The pullback of the closed target-space form is
+
+[
+F_Q
+
+\Phi^*\omega
+
+\frac12
+\omega_{AB}
+dY^A\wedge dY^B.
+]
+
+In components,
+
+[
+\boxed{
+F_{Q\mu\nu}
+
+\omega_{AB}
+\partial_\mu Y^A
+\partial_\nu Y^B.
+}
+]
+
+Since
+
+[
+\omega_{AB}=-\omega_{BA},
+]
+
+F_Q is automatically antisymmetric.
+
+The topological coupling is
+
+[
+\boxed{
+S_{\rm top}
+
+\lambda_Q
+\int_M B\wedge F_Q.
+}
+]
+
+In components,
+
+[
+\boxed{
+S_{\rm top}
+
+\frac{\lambda_Q}{4}
+\int d^4x,
+\sqrt{-g},
+\varepsilon^{\mu\nu\rho\sigma}
+B_{\mu\nu}
+F_{Q\rho\sigma}.
+}
+]
+
+The factor 1/4 is required because
+
+[
+B=\frac12B_{\mu\nu}dx^\mu\wedge dx^\nu,
+]
+
+and
+
+[
+F_Q=\frac12F_{Q\rho\sigma}dx^\rho\wedge dx^\sigma.
+]
+
+Therefore
+
+[
+B\wedge F_Q
+
+\frac14
+B_{\mu\nu}F_{Q\rho\sigma}
+dx^\mu\wedge dx^\nu\wedge dx^\rho\wedge dx^\sigma.
+]
+
+---
+
+7. Two-form kinetic action
+
+We define
+
+[
+\boxed{
+S_B
+
+-\frac12
+\int_M H\wedge *H.
+}
+]
+
+Since
+
+[
+H=\frac1{3!}
+H_{\mu\nu\rho}
+dx^\mu\wedge dx^\nu\wedge dx^\rho,
+]
+
+we obtain
+
+[
+\boxed{
+S_B
+
+-\frac1{12}
+\int d^4x\sqrt{-g},
+H_{\mu\nu\rho}H^{\mu\nu\rho}.
+}
+]
+
+---
+
+8. Matter action
+
+Matter couples minimally to the conformally related metric
+
+[
+\boxed{
+\widetilde g_{\mu\nu}
+
+A^2(\phi,\mathcal M),
+g_{\mu\nu}.
+}
+]
+
+Here \mathcal M is a specified scalar function on the thermodynamic target:
+
+[
+\mathcal M=\mathcal M(Y).
+]
+
+The matter action is therefore
+
+[
+\boxed{
+S_m
+
+S_m[\Psi_m,\widetilde g_{\mu\nu}].
+}
+]
+
+We deliberately do not include \mathcal I_Q in A in the minimal theory.
+
+The optional extension
+
+[
+A=A(\phi,\mathcal M,\mathcal I_Q)
+]
+
+will be treated separately because it creates additional Y^A, B_{\mu\nu}, and metric variations.
+
+---
+
+9. Boundary action
+
+For a spacetime with nonempty boundary,
+
+[
+\partial M\neq\varnothing,
+]
+
+the Einstein-Hilbert action requires the Gibbons-Hawking-York term for a well-defined Dirichlet variational principle:
+
+[
+\boxed{
+S_{\rm GHY}
+
+\frac{1}{8\pi G}
+\int_{\partial M}
+K,\varepsilon_{\partial M}.
+}
+]
+
+Here
+
+[
+K=h^{\mu\nu}\nabla_\mu n_\nu
+]
+
+is the trace of the extrinsic curvature,
+
+[
+h_{\mu\nu}
+
+g_{\mu\nu}-s,n_\mu n_\nu,
+]
+
+and n^\mu is the outward-pointing unit normal with
+
+[
+n_\mu n^\mu=s,
+\qquad s=\pm1.
+]
+
+The sign of the boundary term is understood relative to the chosen orientation convention.
+
+For the matter, scalar, Y^A, and B sectors we impose, for the basic Dirichlet problem,
+
+[
+\delta\phi|_{\partial M}=0,
+]
+
+[
+\delta Y^A|_{\partial M}=0,
+]
+
+[
+\delta B_{\mu\nu}|_{\partial M}=0,
+]
+
+and
+
+[
+\delta\Psi_m|_{\partial M}=0.
+]
+
+Under these conditions the corresponding boundary variations vanish.
+
+---
+
+10. Variation with respect to B_{\mu\nu}
+
+We now perform the variation exactly.
+
+Since
+
+[
+H=dB,
+]
+
+we have
+
+[
+\delta H=d(\delta B).
+]
+
+The kinetic action gives
+
+[
+\delta S_B
+
+-\int_M\delta H\wedge *H.
+]
+
+Thus
+
+[
+\delta S_B
+
+-\int_M d(\delta B)\wedge *H.
+]
+
+Using
+
+[
+d(\delta B\wedge *H)
+
+d(\delta B)\wedge H
++
+(-1)^2\delta B\wedge dH,
+]
+
+we obtain
+
+[
+d(\delta B)\wedge *H
+
+d(\delta B\wedge *H)
+
+\delta B\wedge d*H.
+]
+
+Therefore
+
+[
+\boxed{
+\delta S_B
+
+-\int_{\partial M}\delta B\wedge H
++
+\int_M\delta B\wedge dH.
+}
+]
+
+The topological term varies as
+
+[
+\delta_BS_{\rm top}
+
+\lambda_Q
+\int_M
+\delta B\wedge F_Q.
+]
+
+Consequently,
+
+[
+\delta_BS_{\rm RTCH}
+
+\int_M
+\delta B\wedge
+\left(
+d*H+\lambda_QF_Q
+\right)
+
+\int_{\partial M}
+\delta B\wedge *H.
+]
+
+Thus the exact Euler-Lagrange equation is
+
+[
+\boxed{
+d*H+\lambda_QF_Q=0.
+}
+]
+
+For Dirichlet B-boundary conditions,
+
+[
+\boxed{
+\delta B|_{\partial M}=0,
+}
+]
+
+the boundary term vanishes.
+
+---
+
+11. Component form of the B-equation
+
+The three-form H satisfies
+
+[
+(*H)_\sigma
+
+\frac1{3!}
+\varepsilon_{\sigma\mu\nu\rho}
+H^{\mu\nu\rho}.
+]
+
+Therefore
+
+[
+d*H
+
+\frac12
+\nabla_\lambda H^{\lambda\mu\nu}
+,
+\iota_{\partial_\mu}
+\iota_{\partial_\nu}
+\varepsilon_g.
+]
+
+The resulting component equation is
+
+[
+\boxed{
+\nabla_\rho H^{\rho\mu\nu}
++
+\frac{\lambda_Q}{2}
+\varepsilon^{\mu\nu\rho\sigma}
+F_{Q\rho\sigma}
+
+0. 
+
+}
+]
+
+The factor 1/2 is required because the Hodge dual of a two-form contains the 1/2! normalization.
+
+---
+
+12. Variation of Y^A: kinetic sector
+
+Define
+
+[
+X
+
+G_{AB}
+g^{\mu\nu}
+\partial_\mu Y^A
+\partial_\nu Y^B.
+]
+
+Then
+
+[
+S_Y
+
+-\int d^4x\sqrt{-g}
+\left[
+\frac12X+U
+\right].
+]
+
+Varying Y^A,
+
+[
+\delta S_Y
+
+-\int d^4x\sqrt{-g}
+\left[
+\frac12
+\partial_CG_{AB}
+\delta Y^C
+\nabla_\mu Y^A\nabla^\mu Y^B
++
+G_{AB}
+\nabla_\mu(\delta Y^A)
+\nabla^\mu Y^B
++
+\partial_CU,\delta Y^C
+\right].
+]
+
+Integrating the second term by parts gives
+
+[
+-\int\sqrt{-g},
+G_{AB}
+\nabla_\mu(\delta Y^A)
+\nabla^\mu Y^B
+
+\int\sqrt{-g},
+\delta Y^A
+\nabla_\mu
+\left(
+G_{AB}\nabla^\mu Y^B
+\right)
+
+\int_{\partial M}
+\delta Y^A
+G_{AB}n_\mu\nabla^\mu Y^B
+\varepsilon_{\partial M}.
+]
+
+Combining terms and using the target-space Christoffel symbols yields
+
+[
+\boxed{
+\delta S_Y
+
+\int_M
+\sqrt{-g},
+\delta Y^A
+G_{AB}
+\left[
+\Box Y^B
++
+\Gamma^B{}{CD}
+\nabla\mu Y^C\nabla^\mu Y^D
+
+G^{BE}\partial_EU
+\right]d^4x
+
+\int_{\partial M}
+\delta Y^A
+G_{AB}n^\mu\nabla_\mu Y^B
+\varepsilon_{\partial M}.
+}
+]
+
+---
+
+13. Exact Y^A variation of the topological term
+
+This is the crucial cohomological calculation.
+
+Because
+
+[
+F_Q=\Phi^*\omega,
+]
+
+the variation of the pullback under
+
+[
+Y^A\rightarrow Y^A+\delta Y^A
+]
+
+is
+
+[
+\delta F_Q
+
+\Phi^*
+\left(
+\mathcal L_{\delta Y}\omega
+\right).
+]
+
+Cartan's identity gives
+
+[
+\mathcal L_{\delta Y}\omega
+
+d_{\mathcal T}(\iota_{\delta Y}\omega)
++
+\iota_{\delta Y}(d_{\mathcal T}\omega).
+]
+
+Since
+
+[
+d_{\mathcal T}\omega=0,
+]
+
+we obtain
+
+[
+\boxed{
+\delta F_Q
+
+d\left[
+\Phi^*(\iota_{\delta Y}\omega)
+\right].
+}
+]
+
+Now
+
+[
+\iota_{\delta Y}\omega
+
+\delta Y^A
+\iota_{\partial_A}\omega.
+]
+
+Because
+
+[
+\omega
+
+\frac12\omega_{AB}dY^A\wedge dY^B,
+]
+
+we have
+
+[
+\iota_{\partial_C}\omega
+
+\omega_{CB}dY^B.
+]
+
+Consequently,
+
+[
+\boxed{
+\Phi^*(\iota_{\delta Y}\omega)
+
+\delta Y^A
+\omega_{AB}
+dY^B.
+}
+]
+
+Therefore
+
+[
+\delta S_{\rm top}
+
+\lambda_Q
+\int_M
+B\wedge
+d
+\left(
+\delta Y^A\omega_{AB}dY^B
+\right).
+]
+
+Using
+
+[
+d(B\wedge\alpha)
+
+dB\wedge\alpha
++
+B\wedge d\alpha
+]
+
+for a two-form B, we obtain
+
+[
+B\wedge d\alpha
+
+d(B\wedge\alpha)-H\wedge\alpha.
+]
+
+Hence
+
+[
+\boxed{
+\delta S_{\rm top}
+
+\lambda_Q
+\int_{\partial M}
+B\wedge
+\delta Y^A\omega_{AB}dY^B
+
+\lambda_Q
+\int_M
+H\wedge
+\delta Y^A\omega_{AB}dY^B.
+}
+]
+
+Thus the bulk term is
+
+[
+\boxed{
+\delta S_{\rm top}^{\rm bulk}
+
+-\lambda_Q
+\int_M
+\delta Y^A
+H\wedge
+\Phi^*(\iota_{\partial_A}\omega).
+}
+]
+
+---
+
+14. Exact component expression for the topological Y^A source
+
+We have
+
+[
+H
+
+\frac1{3!}
+H_{\mu\nu\rho}
+dx^\mu\wedge dx^\nu\wedge dx^\rho,
+]
+
+and
+
+[
+\Phi^*(\iota_{\partial_A}\omega)
+
+\omega_{AB}
+\partial_\sigma Y^Bdx^\sigma.
+]
+
+Therefore
+
+[
+H\wedge
+\Phi^*(\iota_{\partial_A}\omega)
+
+\frac1{3!}
+H_{\mu\nu\rho}
+\omega_{AB}
+\partial_\sigma Y^B
+dx^\mu\wedge dx^\nu\wedge dx^\rho\wedge dx^\sigma.
+]
+
+Since
+
+[
+dx^\mu\wedge dx^\nu\wedge dx^\rho\wedge dx^\sigma
+
+\varepsilon^{\mu\nu\rho\sigma}
+\varepsilon_g,
+]
+
+we obtain
+
+[
+\boxed{
+H\wedge
+\Phi^*(\iota_{\partial_A}\omega)
+
+\frac1{3!}
+\varepsilon^{\mu\nu\rho\sigma}
+H_{\mu\nu\rho}
+\omega_{AB}
+\partial_\sigma Y^B
+\varepsilon_g.
+}
+]
+
+Define
+
+[
+\boxed{
+J_A^{(Q)}
+
+\frac{\lambda_Q}{3!}
+\varepsilon^{\mu\nu\rho\sigma}
+H_{\mu\nu\rho}
+\omega_{AB}
+\partial_\sigma Y^B.
+}
+]
+
+Then
+
+[
+\boxed{
+\delta S_{\rm top}^{\rm bulk}
+
+-\int_M
+\sqrt{-g},
+J_A^{(Q)}
+\delta Y^A,d^4x.
+}
+]
+
+This is the corrected source expression. In particular, it contains no contraction of a symmetric metric with an antisymmetric Levi-Civita tensor.
+
+---
+
+15. Complete Y^A Euler-Lagrange equation
+
+Combining the kinetic and topological variations,
+
+[
+\delta S_Y+\delta S_{\rm top}=0.
+]
+
+Therefore
+
+[
+G_{AB}
+\left[
+\Box Y^B
++
+\Gamma^B{}{CD}
+\nabla\mu Y^C\nabla^\mu Y^D
+
+G^{BE}\partial_EU
+\right]
+
+J_A^{(Q)}
+=0.
+]
+
+Multiplying by G^{AF},
+
+[
+\boxed{
+\Box Y^F
++
+\Gamma^F{}{CD}
+\nabla\mu Y^C\nabla^\mu Y^D
+
+G^{FE}\partial_EU
+
+G^{FA}J_A^{(Q)}.
+}
+]
+
+Explicitly,
+
+[
+\boxed{
+\Box Y^A
++
+\Gamma^A{}{BC}
+\nabla\mu Y^B\nabla^\mu Y^C
+
+G^{AB}\partial_BU
+
+\frac{\lambda_Q}{3!}
+G^{AB}
+\varepsilon^{\mu\nu\rho\sigma}
+H_{\mu\nu\rho}
+\omega_{BC}
+\partial_\sigma Y^C.
+}
+]
+
+This is the exact thermodynamic/state-field equation generated by the chosen action.
+
+---
+
+16. Scalar-field variation
+
+The scalar action is
+
+[
+S_\phi
+
+-\int\sqrt{-g}
+\left[
+\frac12\nabla_\mu\phi\nabla^\mu\phi
++
+V(\phi)
+\right]d^4x.
+]
+
+Its variation is
+
+[
+\delta S_\phi
+
+-\int\sqrt{-g}
+\left[
+\nabla^\mu\phi\nabla_\mu\delta\phi
++
+V'(\phi)\delta\phi
+\right]d^4x.
+]
+
+Integration by parts gives
+
+[
+-\int\sqrt{-g}
+\nabla^\mu\phi\nabla_\mu\delta\phi
+
+\int\sqrt{-g}
+(\Box\phi)\delta\phi,d^4x
+
+\int_{\partial M}
+n^\mu\nabla_\mu\phi,
+\delta\phi,
+\varepsilon_{\partial M}.
+]
+
+Therefore
+
+[
+\boxed{
+\delta S_\phi
+
+\int_M
+\sqrt{-g}
+\left[
+\Box\phi-V'(\phi)
+\right]
+\delta\phi,d^4x
+
+\int_{\partial M}
+n^\mu\nabla_\mu\phi,
+\delta\phi,
+\varepsilon_{\partial M}.
+}
+]
+
+---
+
+17. Matter stress tensor and conformal variation
+
+Define the matter stress tensor with respect to the physical matter metric \widetilde g_{\mu\nu} by
+
+[
+\boxed{
+\widetilde T^{\mu\nu}
+
+\frac{2}{\sqrt{-\widetilde g}}
+\frac{\delta S_m}
+{\delta\widetilde g_{\mu\nu}}.
+}
+]
+
+Equivalently,
+
+[
+\boxed{
+\delta S_m
+
+\frac12
+\int_M
+\sqrt{-\widetilde g},
+\widetilde T^{\mu\nu}
+\delta\widetilde g_{\mu\nu},d^4x.
+}
+]
+
+Because
+
+[
+\widetilde g_{\mu\nu}
+
+A^2g_{\mu\nu},
+]
+
+we have
+
+[
+\delta\widetilde g_{\mu\nu}
+
+A^2\delta g_{\mu\nu}
++
+2A^2
+\frac{\partial\ln A}{\partial\phi}
+g_{\mu\nu}\delta\phi
++
+2A^2
+\frac{\partial\ln A}{\partial Y^A}
+g_{\mu\nu}\delta Y^A.
+]
+
+Define
+
+[
+\alpha_\phi
+\equiv
+\frac{\partial\ln A}{\partial\phi},
+]
+
+and
+
+[
+\alpha_A
+\equiv
+\frac{\partial\ln A}{\partial Y^A}.
+]
+
+Then
+
+[
+\boxed{
+\delta\widetilde g_{\mu\nu}
+
+A^2
+\left[
+\delta g_{\mu\nu}
++
+2\alpha_\phi g_{\mu\nu}\delta\phi
++
+2\alpha_Ag_{\mu\nu}\delta Y^A
+\right].
+}
+]
+
+Since
+
+[
+\sqrt{-\widetilde g}
+
+A^4\sqrt{-g},
+]
+
+the matter variation becomes
+
+[
+\delta S_m
+
+\frac12
+\int_M
+\sqrt{-g}
+A^6
+\widetilde T^{\mu\nu}
+\delta g_{\mu\nu},d^4x
+]
+
+plus
+
+[
+\int_M
+\sqrt{-g}
+A^6
+\widetilde T
+\alpha_\phi
+\delta\phi,d^4x
+]
+
+plus
+
+[
+\int_M
+\sqrt{-g}
+A^6
+\widetilde T
+\alpha_A
+\delta Y^A,d^4x,
+]
+
+where
+
+[
+\widetilde T
+
+\widetilde g_{\mu\nu}\widetilde T^{\mu\nu}.
+]
+
+It is convenient to define the Einstein-frame stress tensor
+
+[
+\boxed{
+T_m^{\mu\nu}
+
+A^6\widetilde T^{\mu\nu}.
+}
+]
+
+Its trace is
+
+[
+T_m
+
+g_{\mu\nu}T_m^{\mu\nu}
+
+A^6g_{\mu\nu}\widetilde T^{\mu\nu}.
+]
+
+Since
+
+[
+\widetilde g_{\mu\nu}=A^2g_{\mu\nu},
+]
+
+we have
+
+[
+\widetilde T
+
+A^{-2}g_{\mu\nu}\widetilde T^{\mu\nu},
+]
+
+and therefore
+
+[
+T_m=A^4\widetilde T.
+]
+
+Thus
+
+[
+\boxed{
+\delta S_m
+
+\frac12
+\int_M
+\sqrt{-g},
+T_m^{\mu\nu}
+\delta g_{\mu\nu},d^4x
++
+\int_M
+\sqrt{-g},
+\alpha_\phi T_m\delta\phi,d^4x
++
+\int_M
+\sqrt{-g},
+\alpha_AT_m\delta Y^A,d^4x.
+}
+]
+
+This establishes all factors of A explicitly.
+
+---
+
+18. Complete scalar equation including matter coupling
+
+Combining
+
+[
+\delta S_\phi
+]
+
+and
+
+[
+\delta S_m,
+]
+
+the coefficient of \delta\phi is
+
+[
+\Box\phi-V'(\phi)
++
+\alpha_\phi T_m.
+]
+
+Therefore
+
+[
+\boxed{
+\Box\phi
+
+V'(\phi)
++
+\alpha_\phi T_m
+
+0. 
+
+}
+]
+
+Equivalently,
+
+[
+\boxed{
+\Box\phi
+
+V'(\phi)-\alpha_\phi T_m.
+}
+]
+
+Thus the scalar is sourced by the trace of the matter stress tensor whenever
+
+[
+\partial_\phi A\neq0.
+]
+
+---
+
+19. Complete Y^A equation including matter
+
+The matter contribution is
+
+[
+\delta S_m|_{\delta Y}
+
+\int_M
+\sqrt{-g},
+\alpha_AT_m
+\delta Y^A,d^4x.
+]
+
+Therefore the complete equation is
+
+[
+\boxed{
+\Box Y^A
++
+\Gamma^A{}{BC}
+\nabla\mu Y^B\nabla^\mu Y^C
+
+G^{AB}\partial_BU
+
+G^{AB}J_B^{(Q)}
++
+G^{AB}\alpha_BT_m
+
+0. 
+
+}
+]
+
+Equivalently,
+
+[
+\boxed{
+\Box Y^A
++
+\Gamma^A{}{BC}
+\nabla\mu Y^B\nabla^\mu Y^C
+
+G^{AB}\partial_BU
+
+G^{AB}J_B^{(Q)}
+
+G^{AB}\alpha_BT_m.
+}
+]
+
+With
+
+[
+J_B^{(Q)}
+
+\frac{\lambda_Q}{3!}
+\varepsilon^{\mu\nu\rho\sigma}
+H_{\mu\nu\rho}
+\omega_{BC}
+\partial_\sigma Y^C.
+]
+
+---
+
+20. Metric variation
+
+We vary
+
+[
+g_{\mu\nu}.
+]
+
+The standard Einstein-Hilbert variation, including the GHY term, gives
+
+[
+\boxed{
+\delta(S_{\rm EH}+S_{\rm GHY})
+
+\frac1{16\pi G}
+\int_M
+\sqrt{-g}
+G^{\mu\nu}
+\delta g_{\mu\nu},d^4x
+}
+]
+
+under fixed induced boundary metric.
+
+The scalar stress tensor is
+
+[
+\boxed{
+T_{\mu\nu}^{(\phi)}
+
+\nabla_\mu\phi\nabla_\nu\phi
+
+g_{\mu\nu}
+\left[
+\frac12\nabla_\alpha\phi\nabla^\alpha\phi
++
+V(\phi)
+\right].
+}
+]
+
+For the Y sector,
+
+[
+\boxed{
+T_{\mu\nu}^{(Y)}
+
+G_{AB}
+\partial_\mu Y^A
+\partial_\nu Y^B
+
+g_{\mu\nu}
+\left[
+\frac12G_{AB}
+\nabla_\alpha Y^A\nabla^\alpha Y^B
++
+U
+\right].
+}
+]
+
+For the B-field,
+
+[
+\boxed{
+T_{\mu\nu}^{(B)}
+
+\frac12
+H_{\mu\alpha\beta}
+H_\nu{}^{\alpha\beta}
+
+\frac1{12}
+g_{\mu\nu}
+H_{\alpha\beta\gamma}
+H^{\alpha\beta\gamma}.
+}
+]
+
+The topological term
+
+[
+S_{\rm top}
+
+\lambda_Q\int B\wedge F_Q
+]
+
+contains no metric or Hodge-star operation. Therefore
+
+[
+\boxed{
+\frac{\delta S_{\rm top}}{\delta g_{\mu\nu}}=0.
+}
+]
+
+Consequently it contributes no direct stress-energy tensor.
+
+The matter variation gives
+
+[
+\frac12
+\sqrt{-g}
+T_m^{\mu\nu}
+\delta g_{\mu\nu}.
+]
+
+Thus
+
+[
+\delta S_{\rm RTCH}
+
+\frac12
+\int_M
+\sqrt{-g}
+\left[
+\frac1{8\pi G}G^{\mu\nu}
++
+T_m^{\mu\nu}
++
+T_\phi^{\mu\nu}
++
+T_Y^{\mu\nu}
++
+T_B^{\mu\nu}
+\right]
+\delta g_{\mu\nu},d^4x.
+]
+
+Therefore
+
+[
+\boxed{
+G_{\mu\nu}
+
+8\pi G
+\left(
+T_{\mu\nu}^{(m)}
++
+T_{\mu\nu}^{(\phi)}
++
+T_{\mu\nu}^{(Y)}
++
+T_{\mu\nu}^{(B)}
+\right).
+}
+]
+
+---
+
+21. Why the topological term nevertheless affects dynamics
+
+Although
+
+[
+T_{\mu\nu}^{\rm top}=0
+]
+
+directly, S_{\rm top} changes the equations for B_{\mu\nu} and Y^A:
+
+[
+d*H+\lambda_QF_Q=0,
+]
+
+and
+
+[
+\Box Y^A+\Gamma^A{}_{BC}\nabla Y^B\nabla Y^C
+-G^{AB}\partial_BU
+
+G^{AB}J_B^{(Q)}-\cdots.
+]
+
+The resulting Y^A and B_{\mu\nu} configurations then contribute through
+
+[
+T_{\mu\nu}^{(Y)}
+]
+
+and
+
+[
+T_{\mu\nu}^{(B)}.
+]
+
+Thus the coupling is indirectly gravitationally active, even though the metric-independent topological interaction itself carries no local metric stress tensor.
+
+---
+
+22. Variation of the matter action with respect to g_{\mu\nu}
+
+The exact result is
+
+[
+\boxed{
+\delta_gS_m
+
+\frac12
+\int_M
+\sqrt{-g},
+T_m^{\mu\nu}
+\delta g_{\mu\nu},d^4x.
+}
+]
+
+Because our convention varies the covariant metric, this corresponds to
+
+[
+\delta S_m
+
+-\frac12
+\int_M
+\sqrt{-g},
+T_{m,\mu\nu}
+\delta g^{\mu\nu},d^4x.
+]
+
+This sign difference is purely the identity
+
+[
+\delta g_{\mu\nu}
+
+-g_{\mu\alpha}g_{\nu\beta}
+\delta g^{\alpha\beta}.
+]
+
+---
+
+23. Diffeomorphism Noether identity
+
+Because the complete action is diffeomorphism invariant,
+
+[
+\delta_\xi S_{\rm RTCH}=0
+]
+
+for every compactly supported vector field \xi^\mu.
+
+The metric transforms as
+
+[
+\delta_\xi g_{\mu\nu}
+
+2\nabla_{(\mu}\xi_{\nu)}.
+]
+
+The scalar transforms as
+
+[
+\delta_\xi\phi
+
+\xi^\mu\nabla_\mu\phi.
+]
+
+The thermodynamic fields transform as
+
+[
+\delta_\xi Y^A
+
+\xi^\mu\nabla_\mu Y^A.
+]
+
+The two-form transforms as
+
+[
+\delta_\xi B
+
+\mathcal L_\xi B
+
+\iota_\xi H+d(\iota_\xi B).
+]
+
+On shell, the resulting identity is
+
+[
+\boxed{
+\nabla_\mu
+\left(
+T_m^{\mu}{}\nu
++
+T\phi^{\mu}{}\nu
++
+T_Y^{\mu}{}\nu
++
+T_B^{\mu}{}_\nu
+\right)
+=0.
+}
+]
+
+This follows identically from the Bianchi identity
+
+[
+\nabla_\mu G^\mu{}_\nu=0
+]
+
+together with the Euler-Lagrange equations.
+
+---
+
+24. Scalar contribution to the Noether identity
+
+The scalar stress tensor obeys
+
+[
+\boxed{
+\nabla_\mu T_\phi^{\mu}{}_\nu
+
+(\Box\phi-V')
+\nabla_\nu\phi.
+}
+]
+
+Using the scalar equation,
+
+[
+\Box\phi-V'
+
+-\alpha_\phi T_m,
+]
+
+we obtain
+
+[
+\boxed{
+\nabla_\mu T_\phi^{\mu}{}_\nu
+
+-\alpha_\phi T_m\nabla_\nu\phi.
+}
+]
+
+Thus the scalar exchanges energy-momentum with matter.
+
+---
+
+25. Matter non-conservation in the Einstein frame
+
+Because matter couples to
+
+[
+\widetilde g_{\mu\nu}
+
+A^2g_{\mu\nu},
+]
+
+matter is conserved with respect to the physical metric,
+
+[
+\widetilde\nabla_\mu\widetilde T^\mu{}_\nu=0,
+]
+
+but generally not separately conserved with respect to g_{\mu\nu}.
+
+The Einstein-frame identity is
+
+[
+\boxed{
+\nabla_\mu T_m^\mu{}_\nu
+
+\alpha_\phi T_m\nabla_\nu\phi
++
+\alpha_A T_m\nabla_\nu Y^A.
+}
+]
+
+Thus
+
+[
+\nabla_\mu T_m^\mu{}\nu
++
+\nabla\mu T_\phi^\mu{}\nu
++
+\nabla\mu T_Y^\mu{}\nu
++
+\nabla\mu T_B^\mu{}_\nu
+=0.
+]
+
+The individual sectors exchange energy-momentum, while the total stress tensor is conserved.
+
+---
+
+26. B-field Noether identity
+
+The B-field equation is
+
+[
+d*H+\lambda_QF_Q=0.
+]
+
+Taking d,
+
+[
+d(d*H)+\lambda_QdF_Q=0.
+]
+
+Because
+
+[
+d^2=0
+]
+
+and
+
+[
+dF_Q=0,
+]
+
+the equation is automatically consistent.
+
+This gives
+
+[
+\boxed{
+dF_Q=0
+}
+]
+
+as the Bianchi identity associated with the target-space cohomology.
+
+---
+
+27. Gauge Noether identity
+
+Under
+
+[
+B\rightarrow B+d\Lambda,
+]
+
+we have
+
+[
+\delta_\Lambda S_B=0
+]
+
+because
+
+[
+\delta_\Lambda H=d^2\Lambda=0.
+]
+
+For the topological term,
+
+[
+\delta_\Lambda S_{\rm top}
+
+\lambda_Q
+\int_M
+d\Lambda\wedge F_Q.
+]
+
+Using
+
+[
+d(\Lambda\wedge F_Q)
+
+d\Lambda\wedge F_Q
+
+\Lambda\wedge dF_Q,
+]
+
+and
+
+[
+dF_Q=0,
+]
+
+we obtain
+
+[
+\boxed{
+\delta_\Lambda S_{\rm top}
+
+\lambda_Q
+\int_{\partial M}
+\Lambda\wedge F_Q.
+}
+]
+
+Therefore the action is gauge invariant on a closed spacetime,
+
+[
+\partial M=\varnothing,
+]
+
+or under boundary conditions satisfying
+
+[
+\boxed{
+\left.\Lambda\wedge F_Q\right|_{\partial M}=0.
+}
+]
+
+This boundary condition is important and should be stated explicitly in the paper.
+
+---
+
+28. Global topological charge
+
+Let
+
+[
+\Sigma_2
+]
+
+be a closed two-cycle,
+
+[
+\partial\Sigma_2=0.
+]
+
+Define
+
+[
+\boxed{
+Q_{\rm RTCH}[\Sigma_2]
+
+\int_{\Sigma_2}F_Q.
+}
+]
+
+Suppose
+
+[
+\Sigma_2'
+
+\Sigma_2+\partial C_3.
+]
+
+Then
+
+[
+Q_{\rm RTCH}[\Sigma_2']
+
+Q_{\rm RTCH}[\Sigma_2]
+
+\int_{\partial C_3}F_Q
+
+\int_{C_3}dF_Q
+
+0. 
+
+]
+
+Therefore
+
+[
+\boxed{
+Q_{\rm RTCH}[\Sigma_2]
+}
+]
+
+depends only on the homology class
+
+[
+[\Sigma_2]\in H_2(M).
+]
+
+Likewise,
+
+[
+Q_{\rm RTCH}
+
+\langle[\omega],[\Sigma_2]\rangle.
+]
+
+This is the mathematically precise realization of the ECC flux/fingerprint idea.
+
+---
+
+29. Important distinction between topological and local coupling
+
+The topological charge is
+
+[
+Q_{\rm RTCH}
+
+\int_{\Sigma_2}F_Q.
+]
+
+It is not a local scalar field.
+
+The local quantity
+
+[
+\boxed{
+\mathcal I_Q
+
+\frac14F_{Q\mu\nu}F_Q^{\mu\nu}
+}
+]
+
+is a scalar.
+
+These obey fundamentally different transformation properties:
+
+[
+Q_{\rm RTCH}
+\quad\text{is global},
+]
+
+whereas
+
+[
+\mathcal I_Q(x)
+\quad\text{is local}.
+]
+
+Consequently one must not replace
+
+[
+Q_{\rm RTCH}
+]
+
+by
+
+[
+\mathcal I_Q
+]
+
+without explicitly changing the theory.
+
+---
+
+30. Optional local cohomological coupling
+
+Only after the minimal theory has been tested may we introduce
+
+[
+A
+
+A(\phi,\mathcal M,\mathcal I_Q).
+]
+
+Then
+
+[
+\alpha_Q
+
+\frac{\partial\ln A}{\partial\mathcal I_Q}.
+]
+
+The matter variation acquires
+
+[
+\delta S_m
+\supset
+\int_M
+\sqrt{-g},
+T_m\alpha_Q
+\delta\mathcal I_Q,d^4x.
+]
+
+Since
+
+[
+\mathcal I_Q
+
+\frac14F_{Q\mu\nu}F_Q^{\mu\nu},
+]
+
+its variation is
+
+[
+\delta\mathcal I_Q
+
+\frac12F_Q^{\mu\nu}\delta F_{Q\mu\nu}
+
+\frac12
+F_{Q\mu\alpha}
+F_{Q\nu}{}^\alpha
+\delta g^{\mu\nu}.
+]
+
+The first term produces additional B- and Y-equations.
+
+The second produces an additional metric stress contribution.
+
+This is precisely why this coupling should not be hidden inside the minimal master action.
+
+---
+
+31. Test-particle limit
+
+For a point particle, the matter action compatible with the conformal coupling is
+
+[
+\boxed{
+S_p
+
+-m
+\int A(\phi,\mathcal M),ds,
+}
+]
+
+where
+
+[
+ds
+
+\sqrt{-g_{\mu\nu}dx^\mu dx^\nu}.
+]
+
+Define proper time by
+
+[
+ds=c,d\tau.
+]
+
+Then
+
+[
+u^\mu
+
+\frac{dx^\mu}{d\tau},
+\qquad
+u_\mu u^\mu=-c^2.
+]
+
+Variation of the particle action gives
+
+[
+\boxed{
+u^\nu\nabla_\nu u^\mu
+
+-c^2
+\left(
+g^{\mu\nu}
++
+\frac{u^\mu u^\nu}{c^2}
+\right)
+\nabla_\nu\ln A.
+}
+]
+
+Define the orthogonal projector
+
+[
+\boxed{
+h^{\mu\nu}
+
+g^{\mu\nu}
++
+\frac{u^\mu u^\nu}{c^2}.
+}
+]
+
+Then
+
+[
+\boxed{
+u^\nu\nabla_\nu u^\mu
+
+-c^2h^{\mu\nu}\nabla_\nu\ln A.
+}
+]
+
+Because
+
+[
+h^{\mu\nu}u_\mu=0,
+]
+
+the additional acceleration is orthogonal to the four-velocity, as required.
+
+If
+
+[
+A=1,
+]
+
+then
+
+[
+\boxed{
+u^\nu\nabla_\nu u^\mu=0,
+}
+]
+
+and ordinary GR geodesic motion is recovered.
+
+---
+
+32. Dimensions
+
+The cleanest dimensional bookkeeping is obtained by temporarily using
+
+[
+c=\hbar=1.
+]
+
+In four spacetime dimensions,
+
+[
+[S]=1
+]
+
+in natural units, while
+
+[
+[d^4x]=M^{-4}.
+]
+
+Therefore every Lagrangian density has mass dimension
+
+[
+[\mathcal L]=M^4.
+]
+
+The scalar kinetic term gives
+
+[
+[\phi]=M.
+]
+
+Consequently,
+
+[
+[V]=M^4.
+]
+
+For dimensionless thermodynamic coordinates Y^A,
+
+[
+[Y^A]=1,
+]
+
+the target metric G_{AB} is dimensionless and
+
+[
+[U]=M^4.
+]
+
+For the two-form,
+
+[
+[B_{\mu\nu}]=M,
+]
+
+so that
+
+[
+[H_{\mu\nu\rho}]=M^2.
+]
+
+The two-form kinetic term
+
+[
+H^2
+]
+
+then has dimension
+
+[
+M^4.
+]
+
+If the target two-form \omega is dimensionless,
+
+[
+[F_Q]=M^0
+]
+
+as a differential-form coefficient in dimensionless Y-coordinates, and therefore the coupling \lambda_Q is chosen so that
+
+[
+[\lambda_QB\wedge F_Q]
+
+M^4.
+]
+
+The precise engineering dimension of \lambda_Q depends on whether B, Y^A, and \omega are normalized dimensionlessly or with physical scales. The paper should therefore introduce explicit normalization scales rather than silently assigning SI units to abstract thermodynamic coordinates.
+
+---
+
+33. Restoring c and \hbar
+
+The Einstein-Hilbert term becomes
+
+[
+\boxed{
+S_{\rm EH}
+
+\frac{c^3}{16\pi G}
+\int d^4x_{\rm time}\sqrt{-g},R
+}
+]
+
+when x^0=t, or equivalently
+
+[
+\boxed{
+S_{\rm EH}
+
+\frac{c^4}{16\pi G}
+\int d^4x\sqrt{-g},R
+}
+]
+
+when
+
+[
+x^0=ct.
+]
+
+The latter convention is used throughout the covariant equations above.
+
+The quantum theory is then
+
+[
+\boxed{
+Z
+
+\int
+\mathcal Dg,
+\mathcal D\phi,
+\mathcal DY,
+\mathcal DB,
+\mathcal D\Psi_m
+,
+\exp
+\left(
+\frac{iS_{\rm RTCH}}{\hbar}
+\right).
+}
+]
+
+Thus the classical field equations arise from
+
+[
+\delta S_{\rm RTCH}=0,
+]
+
+while the semiclassical expansion is organized in powers of
+
+[
+\hbar.
+]
+
+---
+
+34. Complete classical RTCH field system
+
+The minimal theory is therefore the following closed system.
+
+Einstein equation
+
+[
+\boxed{
+G_{\mu\nu}
+
+\frac{8\pi G}{c^4}
+\left(
+T_{\mu\nu}^{m}
++
+T_{\mu\nu}^{\phi}
++
+T_{\mu\nu}^{Y}
++
+T_{\mu\nu}^{B}
+\right).
+}
+]
+
+Scalar equation
+
+[
+\boxed{
+\Box\phi
+
+V'(\phi)
++
+\alpha_\phi T_m
+
+0. 
+
+}
+]
+
+Thermodynamic/state equation
+
+[
+\boxed{
+\Box Y^A
++
+\Gamma^A{}{BC}
+\nabla\mu Y^B\nabla^\mu Y^C
+
+G^{AB}\partial_BU
+
+G^{AB}J_B^{(Q)}
+
+G^{AB}\alpha_BT_m.
+}
+]
+
+Topological two-form equation
+
+[
+\boxed{
+d*H+\lambda_QF_Q=0.
+}
+]
+
+or
+
+[
+\boxed{
+\nabla_\rho H^{\rho\mu\nu}
++
+\frac{\lambda_Q}{2}
+\varepsilon^{\mu\nu\rho\sigma}
+F_{Q\rho\sigma}
+
+0. 
+
+}
+]
+
+Bianchi identity
+
+[
+\boxed{
+dH=0.
+}
+]
+
+Cohomological closure
+
+[
+\boxed{
+dF_Q=0.
+}
+]
+
+Topological charge
+
+[
+\boxed{
+Q_{\rm RTCH}[\Sigma_2]
+
+\int_{\Sigma_2}F_Q.
+}
+]
+
+Matter conservation in the physical frame
+
+[
+\boxed{
+\widetilde\nabla_\mu\widetilde T^\mu{}_\nu=0.
+}
+]
+
+Total Einstein-frame conservation
+
+[
+\boxed{
+\nabla_\mu
+\left(
+T_m^\mu{}\nu
++
+T\phi^\mu{}\nu
++
+T_Y^\mu{}\nu
++
+T_B^\mu{}_\nu
+\right)
+
+0. 
+
+}
+]
+
+---
+
+35. Standard-physics limits
+
+The theory has several independently testable limits.
+
+35.1 Topological coupling off
+
+Set
+
+[
+\lambda_Q=0.
+]
+
+Then
+
+[
+d*H=0,
+]
+
+and the Y^A equation becomes
+
+[
+\Box Y^A
++
+\Gamma^A{}_{BC}
+\nabla Y^B\nabla Y^C
+
+G^{AB}\partial_BU
+
+-G^{AB}\alpha_BT_m.
+]
+
+---
+
+35.2 Scalar coupling off
+
+Set
+
+[
+A=1.
+]
+
+Then
+
+[
+\alpha_\phi=0,
+\qquad
+\alpha_A=0,
+]
+
+and matter is minimally coupled to g_{\mu\nu}.
+
+The scalar equation becomes
+
+[
+\Box\phi-V'(\phi)=0.
+]
+
+The test-particle equation becomes
+
+[
+u^\nu\nabla_\nu u^\mu=0.
+]
+
+---
+
+35.3 Both novel couplings off
+
+Set
+
+[
+A=1,
+\qquad
+\lambda_Q=0.
+]
+
+Then the matter sector obeys ordinary GR conservation,
+
+[
+\nabla_\mu T_m^\mu{}_\nu=0,
+]
+
+and test particles follow ordinary geodesics,
+
+[
+u^\nu\nabla_\nu u^\mu=0.
+]
+
+---
+
+35.4 No thermodynamic field dynamics
+
+If the Y^A sector is frozen,
+
+[
+\nabla_\mu Y^A=0,
+]
+
+then
+
+[
+F_Q=0
+]
+
+locally, and the cohomological interaction disappears from the local field equations.
+
+This is the appropriate local trivialization limit.
+
+---
+
+36. Relation to entropy/cohomology
+
+The ECC documents propose an entropy field
+
+[
+\mathcal M:\mathcal M_\Phi\rightarrow\mathbb R^+
+]
+
+and an entropy differential
+
+[
+\theta=d\mathcal M,
+]
+
+while also introducing a closed 2-form carrying a cohomological identity.
+
+The rigorous RTCH implementation should therefore use
+
+[
+\mathcal M=\mathcal M(Y)
+]
+
+and
+
+[
+\omega\in\Omega^2(\mathcal T),
+\qquad
+d\omega=0,
+\qquad
+[\omega]\neq0.
+]
+
+It should not identify
+
+[
+\omega=d(d\mathcal M),
+]
+
+because
+
+[
+d^2\mathcal M=0.
+]
+
+This is not merely a notation issue. It determines whether the claimed cohomology is mathematically nontrivial.
+
+The ECC material also describes fluxes
+
+[
+F_E^i
+
+\oint_{\Sigma_i}\omega
+]
+
+as coordinates of a symbolic fingerprint.  The RTCH construction gives that idea a genuine differential-form realization:
+
+[
+F_E^i
+\longrightarrow
+Q_{\rm RTCH}[\Sigma_i]
+
+\int_{\Sigma_i}\Phi^*\omega.
+]
+
+---
+
+37. Entropy production must remain conceptually separate
+
+A conservative Euler-Lagrange action does not, by itself, imply
+
+[
+\nabla_\mu S^\mu>0.
+]
+
+The standard entropy current satisfies
+
+[
+\nabla_\mu S^\mu=\sigma,
+\qquad
+\sigma\ge0.
+]
+
+For an equilibrium sector,
+
+[
+\sigma=0.
+]
+
+The Hodge-dual entropy three-form
+
+[
+\mathscr S=*S^\flat
+]
+
+then obeys
+
+[
+d\mathscr S=0.
+]
+
+For irreversible processes,
+
+[
+\boxed{
+d\mathscr S
+
+\sigma\varepsilon_g.
+}
+]
+
+Thus entropy production should initially be introduced as a thermodynamic inequality/constraint, not falsely identified as an Euler-Lagrange equation of the conservative action.
+
+The ECC documents' action-minimization proposal,
+
+[
+\mathcal L_{\rm symbolic}
+
+|\nabla\mathcal M|^2
++
+\lambda|\operatorname{Ric}_{\mathcal M}|^2
++
+\mu|\omega|^2,
+]
+
+can be interpreted as a symbolic equilibrium functional.  It should not automatically be equated with irreversible entropy production.
+
+A genuinely dissipative RTCH theory would require an additional nonequilibrium variational structure.
+
+---
+
+38. Final variational identity
+
+Collecting every independent variation,
+
+[
+\boxed{
+\begin{aligned}
+\delta S_{\rm RTCH}
+={}&
+\int_M\sqrt{-g}
+\Bigg[
+\frac1{16\pi G}G^{\mu\nu}
++
+\frac12
+\left(
+T_m^{\mu\nu}
++
+T_\phi^{\mu\nu}
++
+T_Y^{\mu\nu}
++
+T_B^{\mu\nu}
+\right)
+\Bigg]
+\delta g_{\mu\nu}
+,d^4x
+\[2mm]
+&+
+\int_M\sqrt{-g}
+\left[
+\Box\phi-V'(\phi)+\alpha_\phi T_m
+\right]
+\delta\phi,d^4x
+\[2mm]
+&+
+\int_M\sqrt{-g}
+\Bigg[
+G_{AB}
+\left(
+\Box Y^B
++
+\Gamma^B{}{CD}
+\nabla\mu Y^C\nabla^\mu Y^D
+
+G^{BE}\partial_EU
+\right)
+\
+&\hspace{42mm}
+
+J_A^{(Q)}
++
+\alpha_AT_m
+\Bigg]
+\delta Y^A,d^4x
+\[2mm]
+&+
+\int_M
+\delta B\wedge
+\left(
+d*H+\lambda_QF_Q
+\right)
+\[2mm]
+&+
+\delta S_m^{(\Psi)}
+\[2mm]
+&+
+\text{boundary terms}.
+\end{aligned}
+}
+]
+
+The boundary terms are
+
+[
+\boxed{
+\begin{aligned}
+\delta S_{\partial M}
+={}&
+-\int_{\partial M}
+\delta B\wedge *H
+\
+&-
+\int_{\partial M}
+\delta Y^A
+G_{AB}n^\mu\nabla_\mu Y^B
+\varepsilon_{\partial M}
+\
+&-
+\int_{\partial M}
+n^\mu\nabla_\mu\phi,
+\delta\phi,
+\varepsilon_{\partial M}
+\
+&+
+\lambda_Q
+\int_{\partial M}
+B\wedge
+\delta Y^A\omega_{AB}dY^B
+\
+&+
+\delta S_{\rm EH+GHY,\partial}.
+\end{aligned}
+}
+]
+
+The last Einstein-Hilbert boundary variation vanishes under fixed induced boundary metric because of the GHY term.
+
+With
+
+[
+\delta g_{\mu\nu}|{\partial M}=0,
+\qquad
+\delta\phi|{\partial M}=0,
+\qquad
+\delta Y^A|{\partial M}=0,
+\qquad
+\delta B|{\partial M}=0,
+]
+
+and the appropriate matter boundary conditions, all boundary variations vanish.
+
+Hence
+
+[
+\boxed{
+\delta S_{\rm RTCH}=0
+}
+]
+
+is exactly equivalent to the field equations given above.
+
+---
+
+39. Status of the construction
+
+The resulting theory has a useful hierarchy:
+
+[
+\boxed{
+\text{GR}
++
+\text{scalar dynamics}
++
+\text{thermodynamic sigma model}
++
+\text{two-form topology}
++
+\text{matter coupling}.
+}
+]
+
+The genuinely topological object is
+
+[
+[\omega]\in H^2(\mathcal T),
+]
+
+with observable pairing
+
+[
+\boxed{
+Q_{\rm RTCH}
+
+\langle[\omega],[\Sigma_2]\rangle.
+}
+]
+
+The local dynamical quantities are
+
+[
+\phi(x),
+\qquad
+Y^A(x),
+\qquad
+B_{\mu\nu}(x),
+]
+
+and their field equations.
+
+The scalar-field coupling modifies matter trajectories through
+
+[
+A(\phi,\mathcal M),
+]
+
+whereas the topological sector modifies the Y^A and B equations through
+
+[
+\lambda_Q B\wedge\Phi^*\omega.
+]
+
+Most importantly, the construction does not require us to assert that arithmetic invariants are physically equivalent to thermodynamic variables. That identification remains a hypothesis to be tested.
+
+The arithmetic layer can subsequently be defined by taking
+
+[
+Y^A
+
+Y^A
+\left(
+N_E,\Delta_E,r_E,R_E,\tau_E,j_E,\Omega_E,\ldots
+\right),
+]
+
+using the LMFDB quantities as the computational state space. This is consistent with the broader ACSC program, where rank, regulator, conductor and related invariants are used to construct symbolic coordinates.
+
+The correct logical chain is therefore
+
+[
+\boxed{
+\text{LMFDB arithmetic data}
+\rightarrow
+\mathcal T_{\rm arithmetic}
+\rightarrow
+\omega
+\rightarrow
+F_Q
+\rightarrow
+Q_{\rm RTCH}
+\rightarrow
+\text{candidate dynamical coupling}
+\rightarrow
+\text{empirical/null test}.
+}
+]
+
+This keeps the mathematical cohomology exact while leaving the physical interpretation explicitly falsifiable.

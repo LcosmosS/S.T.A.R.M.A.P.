@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "STARMAP",
+      "hasCanvas": true,
+      "bodyTextLen": 1438,
+      "bodyTextHash": "21a2c3e07dcbe494e4342bf5c9ba7916717d32012f4401456ddf8ff036609284",
+      "bodyTextPrefix": "STARMAP S.T.A.R. H0_EFF 72.93 km/s/Mpc CATALOG 160 curves Deck P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "STARMAP",
+      "hasCanvas": true,
+      "bodyTextLen": 1345,
+      "bodyTextHash": "71fbbdbfaf15e10dd7c571dac7e8d324a65e5afdf32a097022da19b1a06297f3",
+      "bodyTextPrefix": "STARMAP OBSERVATORY The universe, projected from arithmetic. STA",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
