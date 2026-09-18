@@ -27,6 +27,7 @@
     "jose": "6.2.9",
     "kysely": "^0.28.5",
     "pg": "^8.16.3",
+    "tslib": "^2.8.1",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
     "@radix-ui/react-avatar": "^1.1.11",
