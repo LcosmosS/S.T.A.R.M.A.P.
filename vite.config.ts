@@ -182,10 +182,15 @@ export default defineConfig(({ command, isPreview }) => ({
       ? [
           nitro({
             preset: "vercel",
-            // Auto-registers server/middleware/* (the PWA install page +
-            // manifest + head-tag middleware). Nitro v3 defaults serverDir to
-            // false, so removing this silently unwires /?install=1 on deploys.
             serverDir: "./server",
+            noExternals: [
+              "tslib",
+              /^@radix-ui\//,
+              /^react-remove-scroll/,
+              /^react-style-singleton/,
+              /^use-callback-ref$/,
+              /^use-sidecar$/,
+            ],
           }),
         ]
       : []),
