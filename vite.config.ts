@@ -158,8 +158,16 @@ export default defineConfig(({ command, isPreview }) => ({
   },
   resolve: { tsconfigPaths: true },
   ssr: {
-    noExternal: ["tslib", /@radix-ui\/.*/],
-  },
+  noExternal: [
+    "tslib",
+    /@radix-ui\/.*/,
+    "react-remove-scroll",
+    "react-remove-scroll-bar",
+    "react-style-singleton",
+    "use-callback-ref",
+    "use-sidecar",
+  ],
+},
   plugins: [
     pgliteBootstrapPlugin(),
     // Before tanstackStart so /auth/popup never falls through to the SPA.
