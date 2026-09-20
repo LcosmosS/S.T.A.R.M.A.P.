@@ -3,7 +3,7 @@
 
 ## Vision
 
-**S.T.A.R.M.A.P.** is the applied mapping and visualization engine of the S.T.A.R. Labs Research Program. It aims to generate high-fidelity, dynamically evolving **topographical maps** of the observable universe by projecting deep arithmetic invariants of elliptic curves onto cosmic geometry, modulated by entropy cohomology fields, and rendered through persistent homology and symbolic regression.
+**S.T.A.R.M.A.P.** is the applied mapping and visualization engine of the S.T.A.R. Labs Research Program. It aims to generate high-fidelity, dynamically evolving **topographical** and **topological maps** of the observable universe by projecting deep arithmetic invariants of elliptic curves onto cosmic geometry, modulated by entropy cohomology fields, and rendered through persistent homology and symbolic regression.
 
 These maps will reveal the large-scale structure — **filaments, voids, clusters, gravitational density variations, and cosmic radiation patterns** — not as random outcomes of inflation, but as the deterministic geometric shadow of an underlying **Symbolic Field**.
 
